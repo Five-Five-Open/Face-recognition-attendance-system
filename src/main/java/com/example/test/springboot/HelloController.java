@@ -19,6 +19,8 @@ import java.util.List;
 import com.example.test.service.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/home")
@@ -29,8 +31,9 @@ public class HelloController {
     @Autowired
     private IHelloService helloService;
     @RequestMapping("hello")
-    public String hello(Model m){
+    public String hello(HttpServletRequest request, HttpServletResponse response){
         String sql="SELECT*FROM test";
+
         List<Test> testList=jdbcTemplate.query(sql, new RowMapper<Test>() {
             Test test=null;
             @Override
@@ -42,34 +45,10 @@ public class HelloController {
                 return test;
             }
         });
-        m.addAttribute("now", testList);
+        request.setAttribute("now",testList);
+
         String str=helloService.hello();
         return str;
     }
 
-    /*@RequestMapping("/hi")
-    public String hi(Model m){
-        m.addAttribute("now","lie");
-        return "hi";
-    }*/
-
-
 }
-/*@Controller
-class HiController{
-    @RequestMapping("/hi")
-    public String hi(Model m){
-        m.addAttribute("now","lie");
-        return "hi";
-    }
-
-}*/
-
-
-/*@RestController
-public class HelloController{
-    @RequestMapping("/hello")
-    public String hello(Model m){
-        return "hello";
-    }
-}*/
