@@ -25,30 +25,25 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/home")
 public class HelloController {
-    @Resource
-    private JdbcTemplate jdbcTemplate;
+
 
     @Autowired
     private IHelloService helloService;
     @RequestMapping("hello")
     public String hello(HttpServletRequest request, HttpServletResponse response){
-        String sql="SELECT*FROM test";
 
-        List<Test> testList=jdbcTemplate.query(sql, new RowMapper<Test>() {
-            Test test=null;
-            @Override
-            public Test mapRow(ResultSet rs, int i) throws SQLException {
-                test=new Test();
 
-                test.setName(rs.getString("name"));
-                test.setAge(rs.getInt("age"));
-                return test;
-            }
-        });
-        request.setAttribute("now",testList);
 
-        String str=helloService.hello();
-        return str;
+
+
+       List<Test> testList=helloService.hello();
+       request.setAttribute("now",testList);
+        return "hello";
+    }
+
+    @RequestMapping("hi")
+    public String hi(){
+        return "hi";
     }
 
 }

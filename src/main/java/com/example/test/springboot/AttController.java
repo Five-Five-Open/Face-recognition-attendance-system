@@ -1,5 +1,5 @@
 package com.example.test.springboot;
-//查看考勤历史记录的Controller
+//执行考勤操作
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,5 +18,10 @@ public class AttController {
         return "x";
     }
 
+    @RequestMapping("endAtt")
+    //学生参加完考勤后，传入后台具体的考勤数据
+    public String endAtt(){
+        return "end"; //这将是一个提示页面，点击后跳转回班级主界面
+    }
 
 }

@@ -2,7 +2,7 @@ package com.example.test.springboot;
 //主要负责登录和注册相关的模块
 //登录成功后，对班级的操作将转移到ClassController内
 
-import com.example.test.service.ILoginService;
+import com.example.test.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("login")
 public class LoginController {
 
-    @Autowired
-    ILoginService loginService;
+    //@Autowired
+    //private ILoginService loginService;
     //学生登录的Controller
     @RequestMapping("stu")
     public String stuLogin(){
