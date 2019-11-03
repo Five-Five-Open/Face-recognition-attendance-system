@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+body{
+  background-color: #eaeaea;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+.buttonstyle { /* 按钮美化 */
+  width: 270px; /* 宽度 */
+  height: 40px; /* 高度 */
+  border-width: 0px; /* 边框宽度 */
+  border-radius: 3px; /* 边框半径 */
+  background: #ff708c; /* 背景颜色 */
+  cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+  outline: none; /* 不显示轮廓线 */
+  font-family: Microsoft YaHei; /* 设置字体 */
+  color: white; /* 字体颜色 */
+  font-size: 17px; /* 字体大小 */
+}
+.buttonstyle:hover { /* 鼠标移入按钮范围时改变颜色 */
+  background: #f4b0c0;
+}
+
+
+.button_login { /* 按钮美化 */
+    cursor: pointer；
+    position: relative;
+    display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #FEA9C5;
+    border-radius: 4px;
+    padding: 4px 50px;
+    overflow: hidden;
+    color: #FEA9C5;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 30px;
+}
+.button_login:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: transparent;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button_register { /* 按钮美化 */
+    cursor:pointer;
+    position: relative;
+    display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #FEA9C5;
+    border-radius: 4px;
+    padding: 4px 50px;
+    overflow: hidden;
+    color: #FEA9C5;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 30px;
+}
+.button_register:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: #FEA9C5;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button_error { /* 按钮美化 */
+    position: relative;
+    display: inline-block;
+    background:transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 4px 50px;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 30px;
+    cursor:pointer;
+}
+.button_error:hover { /* 鼠标移入按钮范围时改变颜色 */
+    background:transparent;
+    display: inline-block;
+    border-color: #FEA9C5;
+    color: #FEA9C5;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.input_noline{
+  font-size:30px;
+  background-color:transparent; 
+  border-color: #FFFFFF; 
+  border-style: solid; 
+  border-top-width: 0px;
+  border-right-width: 0px; 
+  border-bottom-width: 1px;
+  border-left-width: 0px; 
+  height: 30px; 
+  color: #FFFFFF;
+}
+
+.banner_botton_on { /* 按钮美化 */
+    cursor: pointer；
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border: 0px solid #2f3036;
+    padding: 15px 60.5px;
+    color: #2f3036;
+    text-indent: 0;
+    line-height: 30px;
+}
+.banner_botton_on:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: #FFFFFF;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #2f3036;
+    text-decoration: none;
+}
+
+.banner_botton_off { /* 按钮美化 */
+    cursor: pointer；
+    position: absolute;
+    display: inline-block;
+    background: #2f3036;
+    border: 0px solid #2f3036;
+    padding: 15px 60.5px;
+    color: #FFFFFF;
+    text-indent: 0;
+    line-height: 30px;
+}
+.banner_botton_off:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: #FFFFFF;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #2f3036;
+    text-decoration: none;
+}
+
+
+.top{
+  position: absolute;
+  background-color: #11192c;
+  top:0px;
+  left: 0px;
+  width:auto;
+  min-width: 100%;
+  height:100px;
+  z-index:21;
+}
+.content_page{
+  position: absolute;
+  background-color: #eaeaea;
+  top: 0;
+  left: 0%;
+  width:100%;
+  min-height:100%;
+  height:auto;
+  overflow-x: hidden;
+
+}
+.tag{
+  position: absolute;
+  top: 18%;
+  left: 0px;
+  width: 100%;
+}
+.nav_bar{
+  position: absolute;
+  background-color: #2f3036;
+  left:0%;
+  top: 0%;
+  width:150px;
+  height:auto;
+  min-height:100%;
+  z-index:20;
+}
+.logo{
+  position: absolute;
+  top:10%;
+  left:2.5%;
+  width:height;
+  height: 100% 
+}
+
+.page{
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 15%;
+  left: 10%;
+  border-radius: 10px;
+  width:  87%;
+  height:auto;
+  min-height:80%;
+
+
+}
+.bottom{
+  position: absolute;
+  background-color: #11192c;
+  top:100%;
+  width:100%;
+  height: 100%;
+}
+
+.table_blank{
+  position: relative;
+  top:  20px;
+  left: 5%;
+}
+
+.box_info{
+  position: absolute;
+  background-color: ;
+  top:0%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+}
+
+.button_search { /* 按钮美化 */
+  width: 70px; /* 宽度 */
+  height: 24px; /* 高度 */
+  border-width: 0px; /* 边框宽度 */
+  border-radius: 3px; /* 边框半径 */
+  background: #2f3036; /* 背景颜色 */
+  cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+  outline: none; /* 不显示轮廓线 */
+  color: white; /* 字体颜色 */
+  font-size: 15px; /* 字体大小 */
+}
+.button_search:hover { /* 鼠标移入按钮范围时改变颜色 */
+  background: #52545c;
+}
+
+
