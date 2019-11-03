@@ -1,103 +1,109 @@
-package com.jmu.client;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+package com.jmu.socket2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Runnable {
 
-    private EditText mEtIp,mEtData;
-    private OutputStream mOutputStream = null;
-    private Socket mSocket = null;
-    private String ip;
-    private String data;
-    private boolean socketStatus = false;
+    //定义相关变量,完成初始化
+    private TextView txtshow;
+    private EditText editsend;
+    private Button btnsend;
+    private static final String HOST = "192.168.43.111";
+    private static final int PORT = 8000;
+    private Socket socket = null;
+    private BufferedReader in = null;
+    private PrintWriter out = null;
+    private String content = "";
+    private StringBuilder sb = null;
+
+    //定义一个handler对象,用来刷新界面
+    public Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            if (msg.what == 0x123) {
+                sb.append(content);
+                txtshow.setText(sb.toString());
+            }
+        }
+
+        ;
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sb = new StringBuilder();
+        txtshow = (TextView) findViewById(R.id.txtshow);
+        editsend = (EditText) findViewById(R.id.editsend);
+        btnsend = (Button) findViewById(R.id.btnsend);
 
-        mEtIp = findViewById(R.id.et_ip);
-        mEtData = findViewById(R.id.et_data);
-    }
+        //当程序一开始运行的时候就实例化Socket对象,与服务端进行连接,获取输入输出流
+        //因为4.0以后不能再主线程中进行网络操作,所以需要另外开辟一个线程
+        new Thread() {
 
-    public void connect(View view){
-        ip = mEtIp.getText().toString();
-        Toast.makeText(MainActivity.this,""+ip,Toast.LENGTH_SHORT).show();
-
-        Thread thread = new Thread(){
-            @Override
             public void run() {
-                super.run();
-                if (!socketStatus) {
-                    try {
-                        //连接服务端
-                        mSocket = new Socket(ip,8000);
-                        if(mSocket != null){
-                            socketStatus = true;
-                        }
+                try {
+                    socket = new Socket(HOST, PORT);
+                    in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
+                    out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
+                            socket.getOutputStream())), true);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
 
-                        mOutputStream = mSocket.getOutputStream();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+        //为发送按钮设置点击事件
+        btnsend.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String msg = editsend.getText().toString();
+                if (socket.isConnected()) {
+                    if (!socket.isOutputShutdown()) {
+                        out.println(msg);
                     }
                 }
             }
-        };
-        thread.start();
+        });
+        new Thread(MainActivity.this).start();
     }
 
-    public void send(View view){
-        data = mEtData.getText().toString();
-        Toast.makeText(MainActivity.this,""+data,Toast.LENGTH_SHORT).show();
-
-        if (data != null) {
-            //在后面加上 '\0' ,是为了在服务端方便我们去解析；
-            data = data + '\0';
-        }
-
-        Thread thread = new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                if(socketStatus){
-                    try {
-                        mOutputStream.write(data.getBytes());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-        thread.start();
-    }
-
-    /*当客户端界面返回时，关闭相应的socket资源*/
+    //重写run方法,在该方法中输入流的读取
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        /*关闭相应的资源*/
+    public void run() {
         try {
-            mOutputStream.close();
-            mSocket.close();
-        } catch (IOException e) {
+            while (true) {
+                if (socket.isConnected()) {
+                    if (!socket.isInputShutdown()) {
+                        if ((content = in.readLine()) != null) {
+                            content += "\n";
+                            handler.sendEmptyMessage(0x123);
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
