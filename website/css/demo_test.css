@@ -1,0 +1,47 @@
+.card{
+      position: absolute;
+      top:15%;
+      background-color: #787878;
+      min-width:720px ;
+      width: 65%;
+      min-height: 300px ;
+      height: 300px; 
+      border-radius: 20px;
+    }
+    .card_img{
+      position: absolute;
+      background-color: #123456;
+      min-width:720px ;
+      width: 100%;
+      min-height: 230px ;
+      height: 230px ; 
+      border-radius: 20px 20px 0px 0px;
+    }
+    .card_text{
+      position: absolute;
+      top: 10%;
+      left: 100px;
+      font-color:#FFFFFF;
+    }
+    .card_nav{
+      position: absolute;
+      background-color: #EFEFEF;
+      bottom: 0%;
+      min-width:720px ;
+      width: 100%;
+      min-height: 70px ;
+      height: 70px ; 
+      border-radius: 0px 0px 20px 20px;
+    }
+    .page{
+      position: absolute;
+      top:50%;
+      min-width:720px ;
+      width: 65%;
+      min-height: 360px ;
+      height: 360px; 
+      border-style: solid;
+      border-width: 1px;
+      border-color: #ABABAB;
+      border-radius:5px;
+    }
