@@ -1,0 +1,811 @@
+/*-- Reset Code --*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*img[width],img[height]{width:auto;height:auto;} wordpress hack to reset the attributes (while making responsive) */
+/*-- Reset Code --*/
+
+/*-- Fonts --*/
+@font-face{
+	font-family: 'Oswald-Light';
+	src:url(../fonts/Oswald-Light.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Cabin-Regular';
+	src:url(../fonts/Cabin-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: 'Nunito-Regular';
+	src:url(../fonts/Nunito-Regular.ttf) format('truetype');
+}
+/*-- Fonts --*/
+
+/*-- Index-Page-Styling --*/
+body {
+    background: url(../images/bg.jpg) no-repeat #FFF;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.clear {
+	clear: both;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-family: Nunito-Regular;
+    font-size: 40px;
+}
+h1 .book {
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-family: Nunito-Regular;
+    font-size: 40px;
+}
+
+.hotel {
+	width: 25%;
+  margin: 0 auto;
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.item1 ,li.item2{
+  margin: 0em 0 2em;
+    list-style-type: none;
+}
+.menu > li > a {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 50px;
+    text-indent: 60px;
+    letter-spacing: 2px;
+    display: block;
+    color: #46E8DE;
+    font-size: 1.1em;
+    text-decoration: none;
+    background: rgba(51, 51, 51, 0.79);
+    font-family: Nunito-Regular;
+    font-weight: bold;
+}
+.menu ul li a {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    line-height: 3em;
+    color: #fff;
+    background-color: rgba(66, 76, 85, 0.48);
+    font-family: Cabin-Regular;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.menu ul li a:hover{
+	background: #fbfbfb;
+	  color: #000;
+}
+.menu > li > a:hover, .menu > li > a.active {
+    color: #33CFE0;
+}
+.menu ul.kid-menu li a{
+	border-bottom: none;
+}
+
+ul.cute {
+    width: 100%;
+    margin: 0;
+}
+
+ul.kid-menu li{
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+}
+
+ul.kid-menu li.menu-kid-left{
+	border-bottom:none;
+}
+ul.cute li{
+	background: rgba(103, 114, 123, 0.32);
+}
+
+.reg {
+    width: 40%;
+    padding: 0.5% 2.5% 0;
+    background-color: rgba(27, 25, 25, 0.74);
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-bottom: 50px;
+    height: 550px;
+}
+
+.reg h1 {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 0;
+    color: #FFF;
+    font-family: Oswald-Light;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #FFF;
+    font-family: Oswald-Light;
+    margin: 0px 0 5px 0;
+    letter-spacing: 1px;
+}
+
+/* WRAPPER */
+.dropdown-button:first-child{
+	margin-left:0;
+}
+.dropdown-button{
+	width:100%;
+}
+.members {
+    margin-left: 10px;
+}
+.adult {
+	float: left;
+	width: 50%;
+	margin-bottom: 10px;
+}
+.adult .dropdown-button .dropdown {
+    display: block;
+    background-color: #EEE;
+    border: 1px solid #E5E5E5;
+    width: 95%;
+    outline: none;
+    padding: 8px 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+.child {
+	float: left;
+	width: 50%;
+	margin-bottom: 10px;
+}
+.child .dropdown-button .dropdown {
+    display: block;
+    background-color: #EEE;
+    border: 1px solid #E5E5E5;
+    width: 95%;
+    outline: none;
+    padding: 8px 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.suite {
+    margin-bottom: 10px;
+}
+.suite h2 {
+    margin-left: 10px;
+}
+.suite .dropdown-button .dropdown {
+    display: block;
+    background-color: #EEE;
+    border: 1px solid #E5E5E5;
+    width: 96%;
+    outline: none;
+    padding: 8px 8px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.rs {
+    margin: 10px 0;
+}
+.rs .check_box {
+    margin-top: 10px;
+    margin-left: 6px;
+}
+label {
+    font-family: arial;
+    font-size: 15px;
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.food {
+    margin: 10px 0 10px 10px;
+}
+.radio-btns {
+    display: flex;
+}
+.reservation-right input[type="text"] {
+  display: block;
+  border: 1px solid #E5E5E5;
+  width: 100%;
+  outline: none;
+  padding: 8px 8px;
+  font-size: 14px;
+  color: #000;
+    cursor: pointer;
+}
+input#datepicker ,input#datepicker1 ,input#datepicker2 {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #EEE;
+  margin-top: 5px;
+  text-indent: 10px;
+}
+
+.book-pag-frm1 {
+    float: left;
+    width: 47%;
+    margin-right: 20px;
+}
+.book-pag-frm2 {
+    float: left;
+    width: 47%;
+    margin-bottom: 10px;
+}
+.date {
+	background: url(../images/date-icon.png) no-repeat 95.5% 45% #fff;
+	cursor: pointer;
+	padding: 8px 0;
+}
+
+.reservation-left img {
+ width: 100%; 
+}
+input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"] {
+  line-height: 0px;
+}
+.reservation-left h3 {
+  color: #DF1E1C;
+  font-size: 25px;
+ font-family: 'Alegreya-Regular';
+}
+.book-pag-frm label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.book-pag {
+  margin-bottom: .5em;
+  margin-left: 10px;
+}
+
+.submit {
+    margin: 20px 0;
+}
+input.book {
+    width: 35%;
+    background-color: #EEE;
+    padding: 15px 0;
+    font-family: Cabin-Regular;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    outline: none;
+    border: none;
+    margin-left: 32%;
+    margin-top: 12px;
+}
+input.book:hover {
+    background-color: rgb(22, 167, 167);
+    color: rgb(241, 241, 241);
+}
+
+.footer {
+    text-align: center;
+    color: #FFF;
+    font-family: Oswald-Light;
+    font-size: 18px;
+}
+.footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #33CFE0;
+  text-decoration: underline;
+}
+
+.reg-footer {
+    text-align: center;
+    color: #FFF;
+    font-family: Oswald-Light;
+    font-size: 18px;
+    margin-top: 200px;
+}
+.reg-footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+.reg-footer a:hover {
+  color: #33CFE0;
+  text-decoration: underline;
+}
+
+/*-- Index-Page-Styling --*/
+
+
+/*--- Responsinator Code ---*/
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        margin: 80px 0;
+    }
+    .menu > li > a {
+        text-indent: 125px;
+    }
+    .footer {
+        margin-top: 250px;
+    }
+    .reg {
+        width: 35%;
+    }
+    .reg-footer {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .menu > li > a {
+        text-indent: 100px;
+    }
+    .footer {
+        margin-top: 200px;
+    }
+    .reg {
+        width: 40%;
+    }
+    .reg-footer {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    h1 {
+        margin: 80px 0;
+    }
+    .menu > li > a {
+        text-indent: 90px;
+    }
+    .footer {
+        margin-top: 80px;
+    }
+    h1.book {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    h1 {
+        margin: 70px 0;
+    }
+    .menu > li > a {
+        text-indent: 70px;
+    }
+    .footer {
+        margin-top: 80px;
+    }
+    .reg {
+        width: 43%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    h1 {
+        margin: 30px 0;
+    }
+      .menu ul li a {
+        line-height: 45px;
+    }
+    .menu > li > a {
+        text-indent: 60px;
+    }
+    .footer {
+        margin-top: 70px;
+    }
+    h1.book {
+        margin: 30px 0;
+    }
+    .reg-footer {
+        margin: 50px 0 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .hotel {
+        width: 28%;
+    }
+    .menu > li > a {
+        text-indent: 70px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hotel {
+        width: 35%;
+    }
+    .reg {
+        width: 45%;
+    }
+    .book-pag-frm1 {
+        margin-right: 15px;
+    }
+    .reg-footer {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 966px) {
+    .menu > li > a {
+        text-indent: 55px;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    .hotel {
+        width: 40%;
+    }
+    .reg {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        margin: 50px 0;
+    }
+    .hotel {
+        width: 45%;
+    }
+    .reg {
+        width: 60%;
+    }
+    .reg-footer {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        margin: 50px 0;
+    }
+    .hotel {
+        width: 45%;
+    }
+    .menu > li > a {
+        text-indent: 65px;
+    }
+    .footer {
+        margin-top: 100px;
+    }
+    .reg {
+        width: 60%;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+    .reg-footer {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .hotel {
+        width: 50%;
+    }
+    .footer {
+        margin: 60px 0 20px 0;
+    }
+    .reg {
+        width: 65%;
+    }
+    .book-pag-frm1 {
+        margin-right: 15px;
+    }
+    .reg-footer {
+        margin: 50px 0 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .hotel {
+        width: 55%;
+    }
+    .footer {
+        margin: 60px 0 20px 0;
+    }
+    .reg {
+        width: 65%;
+    }
+    .book-pag-frm1 {
+        margin-right: 15px;
+    }
+    input.book {
+        width: 45%;
+        margin-left: 27%;
+        padding: 10px 0;
+    }
+    .reg-footer {
+        margin: 50px 0 20px;
+        font-size: 14px;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 603px) {
+    .hotel {
+        width: 55%;
+    }
+    .menu > li > a {
+        text-indent: 55px;
+    }
+    .reg {
+        width: 70%;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .hotel {
+        width: 60%;
+    }
+    .footer {
+        font-size: 16px;
+        margin: 60px 0 20px 0;
+    }
+    h1.book {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+    .reg {
+        width: 70%;
+        height: 500px;
+    }
+    .reg h1 {
+        font-size: 23px;
+        margin: 10px 0 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .adult .dropdown-button .dropdown {
+        padding: 5px 8px;
+    }
+    .child .dropdown-button .dropdown {
+        padding: 5px 8px;
+    }
+    .suite .dropdown-button .dropdown {
+        padding: 6px 8px;
+        width: 95%;
+    }
+    .book-pag-frm1 {
+        width: 47%;
+        margin-right: 15px;
+    }
+    input.book {
+        width: 45%;
+        margin-left: 27%;
+        padding: 10px 0;
+    }
+    .reg-footer {
+        margin: 50px 0 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    h1 {
+        font-size: 35px;
+    }
+    .hotel {
+        width: 65%;
+    }
+    .reg {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 28px;
+    }
+    .hotel {
+        width: 85%;
+    }
+    .reg {
+        width: 90%;
+        height: 500px;
+    }
+    .book-pag-frm1 {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .hotel {
+        width: 90%;
+    }
+    .footer {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 25px;
+    }
+    .hotel {
+        width: 85%;
+    }
+    .menu > li > a {
+        text-indent: 40px;
+    }
+    .footer {
+        font-size: 14px;
+        margin: 60px 0 20px 0;
+    }
+    h1.book {
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    .reg {
+        width: 90%;
+        height: 500px;
+    }
+    .book-pag-frm1 {
+        margin-right: 10px;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .menu > li > a {
+        text-indent: 33px;
+    }
+    .suite .dropdown-button .dropdown {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 22px;
+        margin: 50px 0;
+    }
+    .hotel {
+        width: 90%;
+    }
+    .menu > li > a {
+        text-indent: 35px;
+        font-size: 15px;
+    }
+    .menu ul li a {
+        line-height: 43px;
+        font-size: 15px;
+    }
+    .footer {
+        font-size: 14px;
+        margin: 60px 0 20px 0;
+    }
+    .reg {
+        width: 90%;
+        height: 500px;
+    }
+    .reg h1 {
+        margin: 10px 0 15px 0;
+        font-size: 23px;
+    }
+    h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .members {
+        margin-left: 5px;
+    }
+    .adult .dropdown-button .dropdown {
+        padding: 5px 8px;
+    }
+    .child .dropdown-button .dropdown {
+        padding: 5px 8px;
+    }
+    .suite .dropdown-button .dropdown {
+        margin-left: 5px;
+        padding: 6px 8px;
+    }
+    .book-pag {
+        margin-left: 5px;
+    }
+    .book-pag-frm1 {
+        margin-right: 10px;
+    }
+    input.book {
+        width: 45%;
+        margin-left: 27%;
+        padding: 10px 0;
+    }
+    .reg-footer {
+        margin: 50px 0 20px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    h1 {
+        font-size: 20px;
+        margin: 35px 0;
+    }
+    .hotel {
+        width: 95%;
+    }
+    .menu > li > a {
+        text-indent: 10px;
+        font-size: 13px;
+    }
+    .menu ul li a {
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .footer {
+        font-size: 13px;
+    }
+    h1.book {
+        font-size: 20px;
+    }
+    .reg h1 {
+        margin: 10px 0 15px 0;
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .book-pag-frm1 {
+        margin-right: 5px;
+    }
+}
+
+/*--- Responsinator Code ---*/
