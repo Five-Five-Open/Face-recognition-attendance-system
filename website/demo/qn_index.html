@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ucenter</title>
+<link rel="stylesheet" href="./styles/user_css.css">
+<script type="text/javascript">
+	window.onload=function(){
+		load_page()
+	}
+	function load_page() {
+ 		document.getElementById("viewDiv").innerHTML = '<object type="text/html" data="http://www.bilibili.com/" width="100%" height="100%"></object>';
+   }
+
+</script>
+</head>
+<body >
+<div class="body">
+	<div class="page_user"  >
+		<div style="position: absolute;top: 5%;left: 5%;width: 90%;height:90%;border-radius: 10px;overflow: hidden;" id="viewDiv">
+			
+		</div>
+
+	</div>
+	<div class="banner_user">
+		<div class="banner_user_botton">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<button type="button" class="banner_user_botton_on" onclick="location.href='#'">用户中心</button>
+				<br>
+				<button type="button" class="banner_user_botton_off" onclick="location.href='qn_center.html'">问卷选择</button>
+				<br>
+				<button type="button" class="banner_user_botton_off" onclick="location.href='qn_history.html'">历史问卷</button>
+				<br>
+				<button type="button" class="banner_user_botton_off" onclick="location.href='index.html'">退出登录</button>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

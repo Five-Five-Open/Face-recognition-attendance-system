@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>题卡</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./css.css">
+<link rel="stylesheet" type="text/css" href="./reset.css">
+<style type="text/css">
+.page{
+	position: absolute;
+	width: 1000px;
+	height: 100%;
+	left: 25%;
+	top:0%;
+}
+.box{
+	position: absolute;
+	background-color: #ffffff;
+	width: 90%;
+	height: auto;
+	min-height: 50%;
+	top: 2.5%;
+	left: 4%;
+	box-shadow: 0 0 15px #a2c1f4; padding:10px
+}
+.box_q{
+	width: 900px;
+    height: 280px;
+    padding: 35px 90px;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    white-space: pre-wrap;
+    word-break: normal;
+    background:url(./images/code.png);
+	margin: 0 auto;
+	font-size: 14px;
+}
+.radio-check {
+    position: relative;
+    height: 35px;
+    background-color: #ffffff;
+}
+.radio-check > input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height:20px;
+    opacity: 0;
+    background: #ffffff;
+}
+.radio-check > label {
+    position: absolute;
+    left: 30px;
+    line-height: 20px;
+    top: 0px;
+}
+.radio-check > label:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    background-color: #FFFFFF;
+}
+.radio-check > label:after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 6px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    background-color: #FFFFFF;
+}
+.radio-check input[type='radio']:checked + label:before {
+    border-color: #66ccff;
+    background-color: #FFFFFF;
+}
+.radio-check input[type='radio']:checked + label:after {
+    background: #66ccff;
+}
+</style>
+<body>
+	<div class="page">
+
+
+		<div class="box"">
+			<br>
+			<div class="box_q">题目题目题目题目题目题目题目题目题目题目题目题目</div>
+			<br>
+			<div style="position: absolute;left: 5%"><form method="" name="">
+				
+				<div class="radio-check">
+					<input type="radio" name="Select" id="A">
+					<label for="A">AAAAA</label>
+				</div>
+				<div class="radio-check">
+					<input type="radio" name="Select" id="B">
+					<label for="B">BBBBB</label>
+				</div>
+				<div class="radio-check">
+					<input type="radio" name="Select" id="C">
+					<label for="C">CCCCC</label>
+				</div>
+				<div class="radio-check">
+					<input type="radio" name="Select" id="D">
+					<label for="D">DDDDD</label>
+				</div>
+			</form></div>
+		</div>
+
+
+	</div>
+</body>
+</html>
