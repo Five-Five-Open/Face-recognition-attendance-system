@@ -1,12 +1,16 @@
 package com.example.test.springboot;
 //执行考勤操作
 
+import com.example.test.service.IAttService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("Attend")
 public class AttController {
+    @Autowired
+    private IAttService attService;
     //教师主动发送考勤通知，具体socket在Service中实现
     @RequestMapping("sendAtt")
     public String sendAtt(){

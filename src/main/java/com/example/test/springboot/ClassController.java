@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("class")
 public class ClassController {
-    //@Autowired
-    //private IClassService classService;
+    @Autowired
+    private IClassService classService;
     //刷新展示学生进入班级前的页面
     @RequestMapping("stushow")
     public String showStuData(){

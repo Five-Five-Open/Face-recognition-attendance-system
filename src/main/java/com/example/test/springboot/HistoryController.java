@@ -1,12 +1,16 @@
 package com.example.test.springboot;
 //查看考勤历史记录的Controller
 
+import com.example.test.service.IHistoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("history")
 public class HistoryController {
+    @Autowired
+    private IHistoryService historyService;
 
     //实际上，这个方法是学生和老师共用，需要传入班级和学生的id，显示该学生在该班级每一次签到的记录
     @RequestMapping("stuhistory")

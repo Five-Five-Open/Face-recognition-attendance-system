@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("login")
 public class LoginController {
 
-    //@Autowired
-    //private ILoginService loginService;
+    @Autowired
+    private ILoginService loginService;
     //学生登录的Controller
     @RequestMapping("stu")
     public String stuLogin(){
