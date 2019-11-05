@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body{
+  background-color: #eaeaea;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+.banner_user{
+  position: absolute;
+  background-color: #2f3036;
+  left:0%;
+  top: 0%;
+  width:402px;
+  height:auto;
+  min-height:100%;
+  z-index:20;
+}
+.banner_user_botton{
+  position: absolute;
+  left:0%;
+  top: 0%;
+  width:450px;
+  height:auto;
+  min-height:100%;
+  z-index:20;
+}
+
+.page_user{
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 10%;
+  left: 25%;
+  border-radius: 10px;
+  width:  70%;
+  height:auto;
+  min-height:85%;
+}
+
+
+
+.banner_user_botton_on { /* 按钮美化 */
+    cursor: pointer；
+    position: absolute;
+    display: inline-block;
+    background: #0e94be;
+    border: 0px solid #2f3036;
+    padding: 15px 180px;
+    color: #FFFFFF;
+    text-indent: 0;
+    line-height: 30px;
+}
+.banner_user_botton_on:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: #FFFFFF;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #2f3036;
+    text-decoration: none;
+}
+
+.banner_user_botton_off { /* 按钮美化 */
+    cursor: pointer；
+    position: absolute;
+    display: inline-block;
+    background: #2f3036;
+    border: 0px solid #2f3036;
+    padding: 15px 174px;
+    color: #FFFFFF;
+    text-indent: 0;
+    line-height: 30px;
+}
+.banner_user_botton_off:hover { /* 鼠标移入按钮范围时改变颜色 */
+    cursor:pointer;
+    background: #FFFFFF;
+    display: inline-block;
+    border-color: #FFFFFF;
+    color: #2f3036;
+    text-decoration: none;
+}
